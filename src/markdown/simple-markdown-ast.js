@@ -319,7 +319,6 @@ function commentsToAST(comments, opts, callback) {
             .concat(examplesSection(comment))
             .concat(throwsSection(comment))
             .concat(returnsSection(comment))
-            .concat(metaSection(comment))
             .concat(!!comment.members.instance.length &&
                 comment.members.instance.reduce(function(memo, child) {
                     return memo.concat(generate(depth + 1, child));
